@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://fiddle.jshell.net/aybalasubramanian/NJ787/show/light/ -->
+<html><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>input event with input[type="range"]  - jsFiddle demo by aybalasubramanian</title>
+  
+  <script type="text/javascript" src="dummy.js"></script><style type="text/css"></style>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="result-light.css">
+  
+  <style type="text/css">
+    #result {
+    font-size: 2em;
+}
+  </style>
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+window.onload=function(){
+/* oninput event handler (and input event handler event types) on html5 input[type="range"] 
+   by @girlie_mac
+
+In this example, both "change" and "input" behave the same.
+
+See another example at http://jsfiddle.net/girlie_mac/CcqU7/
+
+*/
+
+var p = document.getElementById("price"),
+    res = document.getElementById("result");
+
+p.addEventListener("input", function() {
+    res.innerHTML = "$" + p.value;
+}, false); 
+
+
+}//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <div style="margin-top: 1em">
+    <h2>Price</h2>
+    $0<input id="price" type="range" min="0" max="50000" value="">$50000
+</div>
+
+<p id="result"></p>
+  
+
+
+
+
+
+</body></html>
